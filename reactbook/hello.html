@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -12,7 +13,14 @@
     <script src="react/build/react-dom.js"></script>
     <script>
       ReactDOM.render(
-        React.DOM.h1(null, "Hello World!"),
+        React.DOM.h1(
+          {id: "my-heading"},
+          React.DOM.span(null,
+            React.DOM.em(null, "Hell"),
+            "o"
+          ),
+          " world!"
+        ),
         document.getElementById("app")
       );
     </script>
